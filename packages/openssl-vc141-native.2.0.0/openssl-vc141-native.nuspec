@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+  <metadata minClientVersion="3.5">
+    <id>openssl-vc141-native</id>
+    <version>2.0.0</version>
+    <title>OpenSSL LTS version 1.1.1j native runtime libraries (x86 and x64) using vc141 toolset</title>
+    <authors>vrogier</authors>
+    <owners>vrogier</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">Apache-2.0</license>
+    <licenseUrl>https://licenses.nuget.org/Apache-2.0</licenseUrl>
+    <icon>images\icon.png</icon>
+    <projectUrl>https://www.openssl.org/</projectUrl>
+    <description>VS 2017 (vc141) prebuilt x86 and x64 native runtime libraries for OpenSSL (Cryptography and SSL/TLS Toolkit). Using LTS version 1.1.1j</description>
+    <summary>VS 2017 (vc141) prebuilt x86 and x64 native runtime libraries for OpenSSL (Cryptography and SSL/TLS Toolkit). Using LTS version 1.1.1j</summary>
+    <releaseNotes>Please refer https://github.com/openssl/openssl/releases/tag/OpenSSL_1_1_1j</releaseNotes>
+    <tags>native, crypto, openssl, x86, x64, vc141</tags>
+    <repository type="git" url="https://github.com/openssl/openssl.git" commit="52c587d60be67c337364b830dd3fdc15404a2f04" />
+  </metadata>
+</package>
