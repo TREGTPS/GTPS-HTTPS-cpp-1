@@ -10,54 +10,6 @@ namespace growxyz::https
     std::string server_port = "17091";
     std::string server_ip = "127.0.0.1";
 
-    std::string dump_headers(const Headers& headers) {
-        std::string s;
-        char buf[BUFSIZ];
-
-        for (auto it = headers.begin(); it != headers.end(); ++it) {
-            const auto& x = *it;
-            snprintf(buf, sizeof(buf), "%s: %s\n", x.first.c_str(), x.second.c_str());
-            s += buf;
-        }
-
-        return s;
-    }
-    std::string log(const Request& req, const Response& res) {
-        std::string s;
-        char buf[BUFSIZ];
-
-        s += "================================\n";
-
-        snprintf(buf, sizeof(buf), "%s %s %s", req.method.c_str(),
-            req.version.c_str(), req.path.c_str());
-        s += buf;
-
-        std::string query;
-        for (auto it = req.params.begin(); it != req.params.end(); ++it) {
-            const auto& x = *it;
-            snprintf(buf, sizeof(buf), "%c%s=%s",
-                (it == req.params.begin()) ? '?' : '&', x.first.c_str(),
-                x.second.c_str());
-            query += buf;
-        }
-        snprintf(buf, sizeof(buf), "%s\n", query.c_str());
-        s += buf;
-
-        s += dump_headers(req.headers);
-
-        s += "--------------------------------\n";
-
-        snprintf(buf, sizeof(buf), "%d %s\n", res.status, res.version.c_str());
-        s += buf;
-        s += dump_headers(res.headers);
-        s += "\n";
-
-        if (!res.body.empty()) { s += res.body; }
-
-        s += "\n";
-
-        return s;
-    }
     std::string decodeBase64(const std::string& base64Text)
     {
         const char* ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";

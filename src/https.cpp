@@ -47,7 +47,7 @@ int main(void) {
         std::cout << "Connection From " + ip + "\n";
         });
     if (!svr.is_valid()) {
-        printf("server has an error...\n");
+        printf("Something went wrong...\n");
         return -1;
     }
     svr.Get("/", [=](const Request&, Response& res) {
@@ -59,11 +59,6 @@ int main(void) {
         snprintf(buf, sizeof(buf), fmt, res.status);
         res.set_content(buf, "text/html");
         });
-
-    svr.set_logger([](const Request& req, const Response& res) {
-        printf("%s", log(req, res).c_str());
-        });
-
 
     svr.listen("0.0.0.0", 443);
 
