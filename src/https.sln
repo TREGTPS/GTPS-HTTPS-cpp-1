@@ -5,11 +5,6 @@ VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "https", "https.vcxproj", "{864CD288-050A-4C8B-9BEF-3048BD876C5B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{280E605F-0CB8-4336-8D9F-CE50A9472AE2}"
-	ProjectSection(SolutionItems) = preProject
-		..\README.md = ..\README.md
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
