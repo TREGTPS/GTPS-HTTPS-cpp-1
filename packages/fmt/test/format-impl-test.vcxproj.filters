@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\acer\Desktop\GrowXYZ\GrowXYZ\vendor\fmt\test\format-impl-test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\acer\Desktop\GrowXYZ\GrowXYZ\vendor\fmt\test\header-only-test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\acer\Desktop\GrowXYZ\GrowXYZ\vendor\fmt\test\test-main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\acer\Desktop\GrowXYZ\GrowXYZ\vendor\fmt\test\gtest-extra.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\acer\Desktop\GrowXYZ\GrowXYZ\vendor\fmt\test\util.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\acer\Desktop\GrowXYZ\GrowXYZ\vendor\fmt\src\os.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\acer\Desktop\GrowXYZ\GrowXYZ\vendor\fmt\test\gtest-extra.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\acer\Desktop\GrowXYZ\GrowXYZ\vendor\fmt\test\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{3E34E010-12A4-3B68-94E4-54C167A254C0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{37F2057D-E277-3EF6-9DEE-E62E59FFF2DA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
