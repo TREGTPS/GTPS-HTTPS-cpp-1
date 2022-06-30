@@ -2,8 +2,8 @@
 This HTTPS will bypass GT version 3.93+ connection to GTPS server
 
 ## How to build?
-Change ip and port at **https.hpp** and you can build.
-Change packages lib and include at **https.vcxproj**
+ - Change ip and port at **https.hpp** and you can build.
+ - Change packages lib and include at **https.vcxproj**
 
 ## Used stuff
 - [cpp-httplib](https://github.com/yhirose/cpp-httplib)
