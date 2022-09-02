@@ -1,2 +1,6 @@
 src/.vs
-src/x64
+src/x64/debug/GrowXYZ-HTTPS.pdb
+src/x64/debug/GrowXYZ-HTTPS_obj
+src/x64/debug/libssl-1_1-x64.pdb
+src/x64/debug/libcrypto-1_1-x64.pdb
+src/x64/debug/GrowXYZ-HTTPS.exe
