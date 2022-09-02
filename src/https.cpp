@@ -55,16 +55,30 @@ int main(void) {
             server_ip,
             server_port),
             "text/html");
-        fmt::print("Connection from -> {}", ip);
+        fmt::print("Connection from -> {}\n", ip);
         });
     if (!svr.is_valid()) {
         printf("Something went wrong...\n");
         printf("Stopping HTTPS\n");
         return -1;
     }
+
+    svr.Get("/cache", [=](const Request&, Response& res) {
+        res.status = 301;
+        res.set_header("Content-Type", "application/x-www-form-urlencoded");
+        res.set_header("Connection", "keep-alive");
+        res.set_header("Accept-Ranges", "bytes");
+        });
+    svr.Post("/cache", [=](const Request&, Response& res) {
+        res.status = 301;
+        res.set_header("Content-Type", "application/x-www-form-urlencoded");
+        });
+
     svr.Get("/", [=](const Request&, Response& res) {
         std::this_thread::sleep_for(std::chrono::seconds(200));
         });
+    svr.set_mount_point("/cache", "public");
+
     svr.set_error_handler([](const Request&, Response& res) {
         const char* fmt = "<p>Error Status: <span style='color:red;'>%d</span></p>";
         char buf[BUFSIZ];
